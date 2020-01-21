@@ -60,29 +60,15 @@ body > div:first-child {
     background: linear-gradient(135deg, rgba(10, 37, 106, 1) 0%, rgba(10, 37, 106, 1) 16%, rgba(24, 87, 235, 1) 39%, rgba(50, 220, 255, 1) 54%, rgba(18, 118, 240, 1) 65%, rgba(10, 37, 106, 1) 100%);
     background-size: 275vw;
     background-position: left;
-    -webkit-animation: backgroundshift 2s ease-out forwards;
     animation: backgroundshift 2s ease-out forwards;
 
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-line-pack: center;
     align-content: center;
 }
 
 body > div:first-child > p {
     margin-top: 6px;
-}
-
-@-webkit-keyframes backgroundshift {
-    100% {
-        background-position: right;
-    }
 }
 
 @keyframes backgroundshift {
@@ -108,7 +94,6 @@ body > div:first-child.onzichtbaar {
 /* Notification bar op mobiel */
 @media only screen and (max-width: 980px) {
     body > div:first-child {
-        -webkit-animation: backgroundshift .9s ease-out forwards;
         animation: backgroundshift .9s ease-out forwards;
     }
 
@@ -117,7 +102,6 @@ body > div:first-child.onzichtbaar {
         position: relative;
         right: -10px;
         top: 0;
-        -ms-flex-item-align: center;
         align-self: center
     }
 }
@@ -179,10 +163,7 @@ nav a:active p {
 }
 
 nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -238,13 +219,11 @@ nav > ul button img {
         top: 0;
         right: -100vw;
         background: #373A47;
-        -webkit-transition: .7s;
         transition: .7s;
     }
 
     .schuifmenuuit {
         right: -22.5vw;
-        -webkit-transition: .7s;
         transition: .7s;
     }
 
@@ -297,7 +276,6 @@ main a:first-child div {
     box-shadow: rgba(25, 54, 80, 0.2) 0px 23px 50px 0px;
 
     border-radius: 6px;
-    -webkit-transition: .2s;
     transition: .2s;
 }
 
@@ -668,7 +646,6 @@ footer {
     text-align: center;
     padding: 140px 0 0 0;
     margin-top: -300px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgb(24, 87, 235)), to(rgb(13, 52, 151)));
     background-image: linear-gradient(90deg, rgb(24, 87, 235), rgb(13, 52, 151));
 }
 
@@ -717,32 +694,22 @@ footer p:nth-child(3) {
 
     /* IOTA logo in footer naar boven krijgen op mobiel */
     footer ul > li:nth-child(1) {
-        -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
         order: 2;
     }
 
     footer ul > li:nth-child(2) {
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
         order: 3;
     }
 
     footer ul > li:nth-child(3) {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
         order: 1;
     }
 
     footer ul > li:nth-child(4) {
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
         order: 4;
     }
 
     footer ul > li:nth-child(5) {
-        -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
         order: 5;
     }
 }
@@ -759,8 +726,6 @@ footer p:nth-child(3) {
 }
 
 .tweedepagina > main > header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     max-width: 1170px;
@@ -777,7 +742,6 @@ footer p:nth-child(3) {
 .tweedepagina header > section > img:first-child {
     position: absolute;
     z-index: -10;
-    -webkit-transform: skew(-65deg, 66deg);
     transform: skew(-65deg, 66deg);
     top: 175px;
     left: 10vw;
@@ -787,7 +751,6 @@ footer p:nth-child(3) {
 .tweedepagina header > section > img:nth-child(2) {
     position: absolute;
     z-index: -10;
-    -webkit-transform: skew(-14deg, 195deg);
     transform: skew(-14deg, 195deg);
     top: 40px;
     left: 15vw;
@@ -827,7 +790,7 @@ footer p:nth-child(3) {
     }
 }
 
-@media (max-width:780px) {
+@media (max-width:980px) {
     .tweedepagina > main > header {
         display: block;
         width: 100%;
@@ -845,7 +808,6 @@ footer p:nth-child(3) {
     }
 
     .tweedepagina header > section > img:nth-child(2) {
-        -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         top: 50px;
         left: 0;
@@ -979,12 +941,7 @@ footer p:nth-child(3) {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -1006,7 +963,6 @@ footer p:nth-child(3) {
     text-align: left;
     margin: auto;
     background: none;
-    -webkit-transform: none;
     transform: none;
 
     display: -webkit-box;
@@ -1044,9 +1000,6 @@ footer p:nth-child(3) {
 @media only screen and (max-width:980px) {
     .tweedepagina > main > section:nth-of-type(2) {
         margin-top: -150px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -1076,31 +1029,19 @@ footer p:nth-child(3) {
 
 /* Form inputs */
 .tweedepagina form > section:first-of-type {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
 .tweedepagina form > section:first-of-type > div:first-child {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 
 .tweedepagina form > section:first-of-type > div:nth-child(2) {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     padding: 0 20px;
 }
@@ -1155,15 +1096,11 @@ input[type=submit] {
     padding: 12px 21px;
     border-radius: 100px;
     border: none;
-    -webkit-box-shadow: 0 9px 26px 3px #c5e3fa;
     box-shadow: 0 9px 26px 3px #c5e3fa;
 }
 
 @media only screen and (max-width:980px) {
     .tweedepagina form > section:first-of-type {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
     }
 
