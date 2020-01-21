@@ -65,6 +65,7 @@ body > div:first-child {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    z-index: 999;
 }
 
 body > div:first-child > p {
@@ -794,9 +795,11 @@ footer p:nth-child(3) {
     .tweedepagina > main > header {
         display: block;
         width: 100%;
+        height:190px;
         margin-left: 3vw;
         position: relative;
         max-width: none;
+        overflow: hidden;
     }
 
     .tweedepagina header > section:first-child {
@@ -889,7 +892,6 @@ footer p:nth-child(3) {
 .tweedepagina > main > section:first-of-type > ul li {
     max-width: 22%;
     text-align: center;
-
 }
 
 .tweedepagina > main > section:first-of-type > ul img {
@@ -905,8 +907,8 @@ footer p:nth-child(3) {
 @media only screen and (max-width: 980px) {
     .tweedepagina > main > section:first-of-type {
         background-color: #ffffff;
-        margin-top: -70px;
-        padding-top: 30px;
+        padding-top: 0;
+        margin-top: 30px;
         width: 100%;
         max-width: 724px;
     }
@@ -923,6 +925,10 @@ footer p:nth-child(3) {
         padding: 0;
     }
 
+    .tweedepagina > main > section:nth-of-type(3) {
+        margin: 10px auto;
+    }
+    
     .tweedepagina > main > section:nth-of-type(3) > img {
         padding: 0 20px;
     }
@@ -931,10 +937,6 @@ footer p:nth-child(3) {
     .tweedepagina > main > section:nth-of-type(3) > p {
         width: 100%;
         padding: 20px;
-    }
-
-    .tweedepagina > main > section:nth-of-type(3) {
-        margin-top: 40px;
     }
 
     .tweedepagina > main > section:first-of-type > ul {
