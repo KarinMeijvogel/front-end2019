@@ -843,7 +843,7 @@ footer p:nth-child(3) {
 /* Tekstblokken: 'Why join...?' en 'Joint Use Case...' */
 .tweedepagina > main > section:first-of-type,
 .tweedepagina > main > section:nth-of-type(3) {
-    margin: 20px auto 70px auto;
+    margin: 70px auto;
     width: 100%;
     max-width: 1140px;
 }
