@@ -843,7 +843,7 @@ footer p:nth-child(3) {
 /* Tekstblokken: 'Why join...?' en 'Joint Use Case...' */
 .tweedepagina > main > section:first-of-type,
 .tweedepagina > main > section:nth-of-type(3) {
-    margin: 100px auto;
+    margin: 20px auto 70px auto;
     width: 100%;
     max-width: 1140px;
 }
@@ -1000,7 +1000,6 @@ footer p:nth-child(3) {
     width: 65%;
     background: #F0F6F8;
     border-radius: 10px;
-    height: 500px;
     padding: 60px;
 }
 
