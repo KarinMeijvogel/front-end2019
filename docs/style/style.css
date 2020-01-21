@@ -1141,10 +1141,6 @@ input[type=submit] {
 }
 
 @media only screen and (max-width:980px) {
-    .tweedepagina > main > section:nth-of-type(4) {
-        margin-top: -60px;
-    }
-
     .tweedepagina > main > section:nth-of-type(4) > div > ul {
         padding: 20px 40px;
     }
