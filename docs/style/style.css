@@ -986,8 +986,8 @@ footer p:nth-child(3) {
 
 .tweedepagina > main > section:nth-of-type(2) > div > img {
     position: absolute;
-    width: 255px;
-    max-width: 255px;
+    width: 265px;
+    max-width: 265px;
     margin: -120px 150px;
 }
 
