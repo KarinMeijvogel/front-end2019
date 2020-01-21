@@ -1,0 +1,1150 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito sans', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 27px;
+    color: #4E5A61;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #000;
+}
+
+h3 {
+    color: #899CA6;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.84px;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: #009fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+button:focus {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+/* Begin notificatiebar */
+body > div:first-child {
+    position: relative;
+    padding: 15px 35px;
+    color: #ffffff;
+    font-weight: 100;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(10, 37, 106, 1) 0%, rgba(10, 37, 106, 1) 16%, rgba(24, 87, 235, 1) 39%, rgba(50, 220, 255, 1) 54%, rgba(18, 118, 240, 1) 65%, rgba(10, 37, 106, 1) 100%);
+    background-size: 275vw;
+    background-position: left;
+    animation: backgroundshift 2s ease-out forwards;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    }
+
+body > div:first-child > p {
+    margin-top: 6px;
+}
+
+@keyframes backgroundshift {
+    100% {
+        background-position: right;
+    }
+}
+
+body > div:first-child > button {
+    padding: 12px 40px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    background: linear-gradient(-206deg, rgb(66, 228, 214) 0%, rgb(0, 176, 253) 100%);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+body > div:first-child.onzichtbaar {
+    display: none;
+}
+
+/* Notification bar op mobiel */
+@media only screen and (max-width: 980px) {
+    body > div:first-child {
+        animation: backgroundshift .9s ease-out forwards;
+    }
+
+    body > div:first-child > button {
+        padding: 15px 25px;
+        position: relative;
+        right: -10px;
+        top: 0;
+        align-self: center
+    }
+}
+
+/* Overlay mobiel menu */
+nav > div:first-of-type {
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:-20;
+    transition: .5s;
+}
+
+nav > div:first-of-type.zichtbaar {
+    z-index:0;
+    opacity:.3;
+    transition: .5s;
+}
+
+/* Begin navigatie */
+nav {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    padding: 30px 15px;
+    z-index: 101;
+    position: relative;
+
+    background: #ffffff;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+nav a p,
+nav a:visited p {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 28px;
+    color: rgb(78, 90, 97);
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 7px 25px 0px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+nav a:hover p,
+nav a:active p {
+    color: #000000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Hamburger button voor mobiel menu */
+nav > button {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 30px;
+}
+
+nav > button img {
+    width: 45px;
+}
+
+/* Kruisje button in mobiel menu */
+nav > ul button img {
+    width: 15px;
+    position: absolute;
+    top: 20px;
+    right: calc(22.5vw + 20px);
+    display: none;
+}
+
+/* Mobiele navigatie */
+@media only screen and (max-width: 1000px) {
+    nav {
+        text-align: left;
+        background-color: #ffffff;
+        top: 0;
+    }
+
+    nav > button,
+    nav > ul button img {
+        display: block;
+    }
+
+
+    nav a p,
+    nav a:visited p,
+    nav a:hover p,
+    nav a:active p {
+        color: #ffffff;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: block;
+        position: fixed;
+        height: 100%;
+        width: 100vw;
+        padding: 50px 15px;
+        top: 0;
+        right: -100vw;
+        background: #373A47;
+        transition: .7s;
+    }
+
+    .schuifmenuuit {
+        right: -22.5vw;
+        transition: .7s;
+    }
+
+}
+
+/* Begin mainsectie */
+h1 {
+    display: block;
+    font-size: 42px;
+    line-height: 62px;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 36px;
+    color: #4e5a61;
+    font-weight: 100;
+}
+
+main {
+    width: 100%;
+    padding-bottom: 200px;
+    overflow-x: hidden;
+}
+
+/* Zwevend blokje 'NEW' bovenaan de pagina */
+main a:first-child div {
+    position: absolute;
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 17px;
+    line-height: 27px;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+
+    margin: 35px;
+    z-index: 3;
+    padding-right: 15px;
+    max-width: 420px;
+    max-height: 110px;
+
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: rgba(25, 54, 80, 0.2) 0px 23px 50px 0px;
+    box-shadow: rgba(25, 54, 80, 0.2) 0px 23px 50px 0px;
+
+    border-radius: 6px;
+    transition: .2s;
+}
+
+main a:first-child:hover div {
+    -webkit-box-shadow: rgba(25, 54, 80, 0.3) 0px 23px 50px 0px;
+    box-shadow: rgba(25, 54, 80, 0.3) 0px 23px 50px 0px;
+}
+
+main a:first-child div p:first-child {
+    background: #173A9A;
+    font-size: 16px;
+    padding: 15px;
+    height: 110px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .47px;
+    color: #ffffff;
+    border-radius: 6px 0px 0px 6px;
+    max-width: 30%;
+}
+
+main a:first-child div p:nth-child(2) {
+    margin-left: 20px;
+}
+
+main a:first-child div img {
+    margin-left: 30px;
+    max-width: 2%;
+}
+
+/* Zwevende knop om terug naar top te scrollen */
+main > button:first-of-type img {
+    width: 55px;
+    height: 55px;
+}
+
+main > button:first-of-type {
+    position: fixed;
+    z-index: 100;
+    right: 15px;
+    top: 40vh;
+    opacity: 0;
+}
+
+main > button:first-of-type.zichtbaar {
+    opacity: 1;
+}
+
+
+@media only screen and (max-width:1000px) {
+
+    /* Dit is het zwevende blokje 'NEW' bovenaan de pagina. Deze ziet er bewust anders uit op mobiel: op de originele website wordt hij afgesneden en valt de tekst buiten het scherm. */
+    main > a:first-child > div {
+        margin: 0 20px;
+        height: 160px;
+        max-height: 160px;
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    main > a:first-child div > p:first-child {
+        height: 160px;
+    }
+}
+
+
+/* Begin grote introductieheader */
+header {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow-y: visible;
+}
+
+header h1 {
+    max-width: 570px;
+}
+
+header h2 {
+    margin-top: 25px;
+    max-width: 400px;
+}
+
+header a p,
+header a:active p,
+header a:visited p {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .7;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: px;
+    color: #4e5a61;
+    cursor: pointer;
+    padding: 7px 15px 0px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+header a:hover p {
+    color: #000000;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+header a:nth-of-type(2) p {
+    margin-top: 25px;
+}
+
+
+/* Dit is de headercontainer, opgedeeld in linker en rechter section */
+header > div:first-child {
+    width: 100%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0px calc(50vw - 600px);
+    background: linear-gradient(190deg, rgb(243, 248, 250) 1%, rgb(234, 240, 244) 95%);
+}
+
+
+/* Dit is de linkerkant van de header */
+header > div:first-child section:first-of-type {
+    margin: 150px auto 0px 95px;
+    position: relative;
+    padding: 40px 0px 140px;
+    width: 65%;
+    max-width: 470px;
+    z-index: 10;
+}
+
+header > div:first-child section:first-of-type a button {
+    margin-top: 40px;
+    min-width: 300px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.47px;
+    padding: 22px 38px;
+    border-radius: 100px;
+    -webkit-box-shadow: rgba(0, 159, 255, 0.27) 0px 16px 25px 0px;
+    box-shadow: rgba(0, 159, 255, 0.27) 0px 16px 25px 0px;
+    background-color: #009fff;
+}
+
+
+/* Dit is de rechterkant van de header */
+header > div:first-child section:nth-of-type(2) {
+    width: 45%;
+    position: relative;
+}
+
+header > div:first-child section:nth-of-type(2) div:first-of-type {
+    z-index: 2;
+    position: absolute;
+    top: 185px;
+    left: 80px;
+    width: 135px;
+    height: 50px;
+    background: linear-gradient(-206deg, rgb(66, 228, 214) 0%, rgb(0, 176, 253) 100%);
+    -webkit-box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
+    box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
+    border-radius: 7px;
+}
+
+/* Zwevende blauwe blokjes en images */
+header > div:first-child section:nth-of-type(2) div:nth-of-type(2) {
+    z-index: 2;
+    position: relative;
+    top: 510px;
+    left: 345px;
+    width: 220px;
+    height: 80px;
+    background-color: rgb(10, 32, 86);
+    -webkit-box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
+    box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
+    border-radius: 7px;
+}
+
+header > div:first-child section:nth-of-type(2) div:nth-of-type(3) {
+    z-index: 2;
+    position: relative;
+    top: 660px;
+    left: 275px;
+    width: 110px;
+    height: 40px;
+    background-color: rgb(10, 32, 86);
+    background: linear-gradient(-206deg, rgb(66, 228, 214) 0%, rgb(0, 176, 253) 100%);
+    border-radius: 7px;
+}
+
+header > div:first-child section:nth-of-type(2) img {
+    position: absolute;
+    z-index: 3;
+}
+
+header > div:first-child section:nth-of-type(2) img:first-of-type {
+    left: 360px;
+    top: 80px;
+}
+
+header > div:first-child section:nth-of-type(2) img:nth-of-type(2) {
+    left: 25px;
+    top: 210px;
+}
+
+header > div:first-child section:nth-of-type(2) img:nth-of-type(3) {
+    left: 145px;
+    top: 395px;
+}
+
+
+/* Hieronder de 3 images van de gekleurde vlakken */
+header > img:first-of-type {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    height: 105%;
+    left: 55vw;
+}
+
+header > img:nth-last-child(2) {
+    position: absolute;
+    right: 86vw;
+    bottom: -77px;
+}
+
+header > img:last-child {
+    left: 36vw;
+    top: 0;
+    position: absolute;
+}
+
+
+/* Mobiele opmaak header */
+@media only screen and (max-width:1000px) {
+    header {
+        width: 100vw;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 25px;
+        line-height: 38px;
+    }
+
+    header h2 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    /* Dit is de headercontainer, opgedeeld in linker en rechter section */
+    header > div:first-child {
+        padding: 0px 25px;
+        margin: 0;
+    }
+
+    /* Dit is de linkerkant van de header */
+    header > div:first-child section:first-of-type {
+        margin: 75px auto 0 0;
+        max-width: 60vw;
+    }
+
+
+    /* Zwevende blauwe blokjes en images */
+    header > div:first-child section:nth-of-type(2) div:first-of-type {
+        left: 60px;
+        top: 230px;
+        height: 40px;
+        background: linear-gradient(-206deg, rgb(66, 228, 214) 0%, rgb(0, 176, 253) 100%);
+        -webkit-box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
+        box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
+        border-radius: 7px;
+    }
+
+    header > div:first-child section:nth-of-type(2) img:nth-of-type(2) {
+        left: 20px;
+        top: 45px;
+        height: 125px;
+    }
+
+    /* Hieronder de 3 images van de gekleurde vlakken */
+    header > img:first-of-type,
+    header > img:nth-last-child(2) {
+        display: none;
+    }
+}
+
+
+/* Begin about section */
+main > section:first-of-type {
+    /* Dit is de about section */
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 690px;
+    width: 100%;
+    padding: 50px 0px;
+}
+
+main > section:first-of-type img {
+    width: 100%;
+    padding: 25px 100px;
+}
+
+
+/* Begin mobiele opmaak about section */
+@media only screen and (max-width:1000px) {
+    #about {
+        padding: 50px 25px;
+    }
+
+    #about img {
+        padding: 25px 15px;
+    }
+}
+
+/* Begin participants section */
+main > section:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EBF1F5;
+    width: 100%;
+    padding: 50px 0px;
+    text-align: center;
+    -webkit-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+main > section:nth-of-type(2) h3 {
+    -webkit-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+}
+
+main > section:nth-of-type(2) img {
+    max-width: 200px;
+    max-height: 120px;
+    padding: 15px;
+}
+
+main > section:nth-of-type(2) ul {
+    max-width: 1440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 40px auto;
+    -webkit-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+}
+
+footer {
+    z-index: -1;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    padding: 140px 0 0 0;
+    margin-top: -300px;
+    background-image: linear-gradient(90deg, rgb(24, 87, 235), rgb(13, 52, 151));
+}
+
+footer a,
+footer a:active,
+footer a:visited,
+footer a:hover {
+    color: #ffffff;
+}
+
+footer ul {
+    max-width: 1140px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px 50px;
+    font-size: .85em;
+}
+
+footer p:nth-child(2) {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+footer p:nth-child(3) {
+    line-height: normal;
+    padding: 20px 30px 40px 30px;
+    opacity: .6;
+}
+
+@media only screen and (max-width:1000px) {
+    footer ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+
+    /* IOTA logo in footer naar boven krijgen op mobiel */
+    footer ul > li:nth-child(1) {
+        order: 2;
+    }
+
+    footer ul > li:nth-child(2) {
+        order: 3;
+    }
+
+    footer ul > li:nth-child(3) {
+        order: 1;
+    }
+
+    footer ul > li:nth-child(4) {
+        order: 4;
+    }
+
+    footer ul > li:nth-child(5) {
+        order: 5;
+    }
+}
+
+
+/* ---------------------- tweede pagina --------------------------------- */
+.tweedepagina nav {
+    background: none;
+}
+
+/* Hieronder de header */
+.tweedepagina header a p {
+    margin-top: 5px;
+}
+
+.tweedepagina > main > header {
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0px 15px;
+    background: transparent;
+}
+
+.tweedepagina header > section:first-child {
+    width: 60%;
+}
+
+.tweedepagina header > section > img:first-child {
+    position: absolute;
+    z-index: -10;
+    transform: skew(-65deg, 66deg);
+    top: 175px;
+    left: 10vw;
+    width: 7%;
+}
+
+.tweedepagina header > section > img:nth-child(2) {
+    position: absolute;
+    z-index: -10;
+    transform: skew(-14deg, 195deg);
+    top: 40px;
+    left: 15vw;
+    width: 33%;
+    max-width: 540px;
+}
+
+.tweedepagina header > section > h1 {
+    line-height: 1.48;
+    max-width: 400px;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: center;
+    position: absolute;
+    top: 155px;
+    left: 19vw;
+}
+
+.tweedepagina header > section:nth-child(2) {
+    width: 40%;
+    max-width: 600px;
+    padding: 87px 0px 80px 100px;
+}
+
+@media only screen and (max-width:1100px) {
+    .tweedepagina header > section:nth-child(2) {
+        padding: 87px 0px 80px 0px;
+    }
+
+    .tweedepagina header > section > h1 {
+        font-size: 30px;
+        top: 130px;
+        left: 22vw;
+
+    }
+}
+
+@media (max-width:980px) {
+    .tweedepagina > main > header {
+        display: block;
+        width: 100%;
+        margin-left: 3vw;
+        position: relative;
+        max-width: none;
+    }
+
+    .tweedepagina header > section:first-child {
+        width: 100%;
+    }
+
+    .tweedepagina header > section > img:first-child {
+        visibility: hidden;
+    }
+
+    .tweedepagina header > section > img:nth-child(2) {
+        transform: rotate(0deg);
+        top: 50px;
+        left: 0;
+        width: 140%;
+        max-width: none;
+    }
+
+    .tweedepagina header > section > h1 {
+        max-width: none;
+        color: #4E5A61;
+        top: 0;
+        right: 5vw;
+        text-align: right;
+    }
+
+    .tweedepagina header > section:nth-child(2) {
+        width: auto;
+        margin: -10px 30px 0 30px;
+    }
+
+    .tweedepagina header > section:nth-child(2) > a > p {
+        color: #ffffff;
+    }
+}
+
+/* Tekstblokken: 'Why join...?' en 'Joint Use Case...' */
+.tweedepagina > main > section:first-of-type,
+.tweedepagina > main > section:nth-of-type(3) {
+    margin: 100px auto;
+    width: 100%;
+    max-width: 1140px;
+}
+
+.tweedepagina > main > section:first-of-type > img {
+    width: 250px;
+    padding: 10px 0px;
+    margin-left: calc(50% - 125px);
+}
+
+.tweedepagina > main > section:nth-of-type(3) > img {
+    width: 200px;
+    padding: 10px 30px;
+    margin-left: calc(50% - 100px);
+}
+
+.tweedepagina > main > section:first-of-type > p,
+.tweedepagina > main > section:nth-of-type(3) > p {
+    padding: 0 20%;
+}
+
+.tweedepagina h2 {
+    font-size: 1.7em;
+    color: #009FFF;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.tweedepagina h3 {
+    font-size: 1.4em;
+    color: #000000;
+    text-transform: none;
+    text-align: center;
+    font-weight: 100;
+    padding: 50px 0;
+}
+
+.tweedepagina > main > section:first-of-type > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.tweedepagina > main > section:first-of-type > ul li {
+    max-width: 22%;
+    text-align: center;
+
+}
+
+.tweedepagina > main > section:first-of-type > ul img {
+    width: 105px;
+    padding: 0;
+}
+
+.tweedepagina > main > section:first-of-type li > figure > figcaption {
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 980px) {
+    .tweedepagina > main > section:first-of-type {
+        background-color: #ffffff;
+        margin-top: -70px;
+        padding-top: 30px;
+        width: 100%;
+        max-width: 724px;
+    }
+
+    .tweedepagina h2 {
+        font-size: 1.4em;
+        margin: auto;
+        word-wrap: break-word;
+    }
+
+    .tweedepagina > main > section:first-of-type > img {
+        width: 200px;
+        margin-left: calc(50% - 100px);
+        padding: 0;
+    }
+
+    .tweedepagina > main > section:nth-of-type(3) > img {
+        padding: 0 20px;
+    }
+
+    .tweedepagina > main > section:first-of-type > p,
+    .tweedepagina > main > section:nth-of-type(3) > p {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .tweedepagina > main > section:nth-of-type(3) {
+        margin-top: 40px;
+    }
+
+    .tweedepagina > main > section:first-of-type > ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tweedepagina > main > section:first-of-type > ul li {
+        max-width: 260px;
+        padding-bottom: 40px;
+    }
+
+    .tweedepagina > main > section:first-of-type li > figure > figcaption {
+        margin-top: 20px;
+    }
+}
+
+
+/* Form */
+.tweedepagina > main > section:nth-of-type(2) {
+    width: 100%;
+    max-width: 1140px;
+    text-align: left;
+    margin: auto;
+    background: none;
+    transform: none;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.tweedepagina > main > section:nth-of-type(2) > div {
+    width: 30%;
+    position: relative;
+}
+
+.tweedepagina > main > section:nth-of-type(2) > div > img {
+    position: absolute;
+    width: 80%;
+    margin: -120px 150px;
+}
+
+.tweedepagina > main > section:nth-of-type(2) > div > h3 {
+    text-align: left;
+}
+
+.tweedepagina form {
+    margin-top: -50px;
+    width: 65%;
+    background: #F0F6F8;
+    border-radius: 10px;
+    height: 500px;
+    padding: 60px;
+}
+
+@media only screen and (max-width:980px) {
+    .tweedepagina > main > section:nth-of-type(2) {
+        margin-top: -150px;
+        flex-direction: column;
+    }
+
+    .tweedepagina > main > section:nth-of-type(2) > div {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .tweedepagina > main > section:nth-of-type(2) > div > img {
+        visibility: hidden;
+    }
+
+    .tweedepagina > main > section:nth-of-type(2) > div > h3 {
+        text-align: center;
+        margin-bottom: -30px;
+    }
+
+    .tweedepagina form {
+        margin-top: 25px;
+        width: 100%;
+        height: auto;
+        padding: 60px 40px;
+    }
+}
+
+
+/* Form inputs */
+.tweedepagina form > section:first-of-type {
+    display: flex;
+}
+
+.tweedepagina form > section:first-of-type > div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tweedepagina form > section:first-of-type > div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    height: 45px;
+    width: 100%;
+    padding: 9px 14px;
+    margin: 10px 0 0 0;
+    background: transparent;
+    border: 1px solid #D8D8D8;
+    border-radius: 25px;
+    font-family: 'Nunito sans', Arial, sans-serif;
+    font-size: .9em;
+    color: #4E5A61;
+}
+
+textarea {
+    height: 155px;
+}
+
+input:focus,
+select:focus,
+option:focus,
+textarea:focus {
+    outline: none;
+}
+
+.tweedepagina form > section:nth-of-type(2) {
+    margin-top: 10px;
+    font-size: .9em;
+    font-style: italic;
+}
+
+label > input {
+    margin-right: 10px;
+}
+
+input[type=submit] {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #009FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: .47px;
+    color: #fff;
+    height: 60px;
+    padding: 12px 21px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 0 9px 26px 3px #c5e3fa;
+}
+
+@media only screen and (max-width:980px) {
+    .tweedepagina form > section:first-of-type {
+        flex-direction: column;
+    }
+
+    .tweedepagina form > section:first-of-type > div:nth-child(2) {
+        padding: 0;
+    }
+}
+
+
+/* Tekstblok 3 */
+.tweedepagina > main > section:nth-of-type(4) {
+    width: 100%;
+    background-color: #F0F6F8;
+    -webkit-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.tweedepagina > main > section:nth-of-type(4) > div {
+    -webkit-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    width: 100%;
+    max-width: 724px;
+    margin: 0 auto;
+    padding: 65px 20px;
+}
+
+.tweedepagina > main > section:nth-of-type(4) > div > ul {
+    list-style: disc;
+    padding: 20px 17px;
+    color: #009FFF;
+}
+
+.tweedepagina > main > section:nth-of-type(4) > div > ul span {
+    margin-left: 5px;
+    color: #4E5A61;
+}
+
+@media only screen and (max-width:980px) {
+    .tweedepagina > main > section:nth-of-type(4) {
+        margin-top: -60px;
+    }
+
+    .tweedepagina > main > section:nth-of-type(4) > div > ul {
+        padding: 20px 40px;
+    }
+}78bh 65 
