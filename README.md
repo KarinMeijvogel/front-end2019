@@ -3,7 +3,7 @@ Front-end 2019
 
 Gebaseerd op de website https://data.iota.org/
 
-Preview op https://karinmeijvogel.github.io/front-end2019/
+Preview op https://imkarin.github.io/front-end2019/
 
 De final code staat in de folder /docs.
 
